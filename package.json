@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server-user": "npx json-server --watch src/data/user.json --port 9000",
     "server-product": "npx json-server --watch src/data/products.json --port 8000",
     "server-component": "npx json-server --watch src/data/components.json --port 8001"
@@ -38,8 +40,10 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.14",
     "typescript": "5.8.2"
-  }
+  },
+  "homepage": "https://zahraHaghverdii.github.io/Casco"
 }
