@@ -8,6 +8,9 @@ export const metadata = {
     template: "لوازم دیجیتالی| %s",
   },
   description: "لوازم دیجیتالی",
+  icons: {
+    icon: "/image_project/logo/favicon.png",
+  },
 };
 
 export default function RootLayout({

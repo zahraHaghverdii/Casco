@@ -8,13 +8,25 @@
     "start": "next start",
     "lint": "next lint",
     "server-user": "npx json-server --watch src/data/user.json --port 9000",
-    "server-product": "npx json-server --watch src/data/products.json --port 8000"
+    "server-product": "npx json-server --watch src/data/products.json --port 8000",
+    "server-component": "npx json-server --watch src/data/components.json --port 8001"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tanstack/react-query": "^5.74.3",
+    "axios": "^1.10.0",
+    "framer-motion": "^12.6.5",
     "json-server": "^1.0.0-beta.3",
+    "lucide-react": "^0.487.0",
+    "moment-jalaali": "^0.10.4",
     "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-paginate": "^8.3.0",
+    "swiper": "^11.2.6",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

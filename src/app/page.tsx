@@ -1,9 +1,9 @@
-import Home from "./Home/home";
+import Home_page from "./Home/page";
 
-export default function Home_pages() {
+export default function pages() {
   return (
     <>
-      <Home />
+      <Home_page />
     </>
   );
 }

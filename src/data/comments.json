@@ -1,0 +1,236 @@
+{
+  "comments": [
+    {
+      "productId": "3",
+      "commentId": 1,
+      "userName": "سینا رضایی",
+      "rating": 4,
+      "comment": "Fast delivery, good quality.",
+      "createdAt": "2025-02-01T09:45:57Z"
+    },
+    {
+      "productId": "8",
+      "commentId": 2,
+      "userName": "محمد امینی",
+      "rating": 4,
+      "comment": "Excellent product!",
+      "createdAt": "2024-09-11T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 3,
+      "userName": "زهرا کریمی",
+      "rating": 3,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2024-12-27T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 4,
+      "userName": "فاطمه محسنی",
+      "rating": 2,
+      "comment": "Great value for the price.",
+      "createdAt": "2025-03-08T09:45:57Z"
+    },
+    {
+      "productId": "2",
+      "commentId": 5,
+      "userName": "حسین ابراهیمی",
+      "rating": 1,
+      "comment": "Totally worth it!",
+      "createdAt": "2024-12-02T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 6,
+      "userName": "حسن زمانی",
+      "rating": 5,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2024-08-11T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 7,
+      "userName": "علیرضا شریفی",
+      "rating": 1,
+      "comment": "Totally worth it!",
+      "createdAt": "2025-02-17T09:45:57Z"
+    },
+    {
+      "productId": "17",
+      "commentId": 8,
+      "userName": "محمدجواد احمدی",
+      "rating": 1,
+      "comment": "Great value for the price.",
+      "createdAt": "2025-04-21T09:45:57Z"
+    },
+    {
+      "productId": "3",
+      "commentId": 9,
+      "userName": "سحر ولدی",
+      "rating": 3,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2024-09-10T09:45:57Z"
+    },
+    {
+      "productId": "10",
+      "commentId": 10,
+      "userName": "بهنوش طالبی",
+      "rating": 4,
+      "comment": "Great value for the price.",
+      "createdAt": "2025-05-02T09:45:57Z"
+    },
+    {
+      "productId": "11",
+      "commentId": 11,
+      "userName": "علی زیبا",
+      "rating": 2,
+      "comment": "Would not recommend.",
+      "createdAt": "2024-05-29T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 12,
+      "userName": "شایان ملکی",
+      "rating": 1,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2024-12-10T09:45:57Z"
+    },
+    {
+      "productId": "2",
+      "commentId": 13,
+      "userName": "امین حیایی",
+      "rating": 5,
+      "comment": "Great value for the price.",
+      "createdAt": "2024-09-04T09:45:57Z"
+    },
+    {
+      "productId": "13",
+      "commentId": 14,
+      "userName": "شینا ولدی",
+      "rating": 3,
+      "comment": "Great value for the price.",
+      "createdAt": "2025-01-13T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 15,
+      "userName": "دنی حقیقی",
+      "rating": 1,
+      "comment": "Excellent product!",
+      "createdAt": "2025-04-07T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 16,
+      "userName": "احمد جعفری",
+      "rating": 1,
+      "comment": "Great value for the price.",
+      "createdAt": "2024-12-23T09:45:57Z"
+    },
+    {
+      "productId": "8",
+      "commentId": 17,
+      "userName": "دنیا حاجی",
+      "rating": 2,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2025-01-15T09:45:57Z"
+    },
+    {
+      "productId": "2",
+      "commentId": 18,
+      "userName": "رسول کریمی",
+      "rating": 4,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2024-08-10T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 19,
+      "userName": "کامران نوری",
+      "rating": 4,
+      "comment": "Excellent product!",
+      "createdAt": "2025-05-03T09:45:57Z"
+    },
+    {
+      "productId": "7",
+      "commentId": 20,
+      "userName": "سروش توکلی",
+      "rating": 4,
+      "comment": "Fast delivery, good quality.",
+      "createdAt": "2024-11-19T09:45:57Z"
+    },
+    {
+      "productId": "7",
+      "commentId": 21,
+      "userName": "مهرداد سهرابی",
+      "rating": 3,
+      "comment": "Totally worth it!",
+      "createdAt": "2025-01-21T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 22,
+      "userName": "پوریا یوسفی",
+      "rating": 3,
+      "comment": "Fast delivery, good quality.",
+      "createdAt": "2024-10-15T09:45:57Z"
+    },
+    {
+      "productId": "9",
+      "commentId": 23,
+      "userName": "نیلوفر داوری",
+      "rating": 4,
+      "comment": "Would not recommend.",
+      "createdAt": "2024-07-31T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 24,
+      "userName": "آرزو شکوهی",
+      "rating": 5,
+      "comment": "Great value for the price.",
+      "createdAt": "2024-07-19T09:45:57Z"
+    },
+    {
+      "productId": "3",
+      "commentId": 25,
+      "userName": "شهاب رضوانی",
+      "rating": 4,
+      "comment": "Totally worth it!",
+      "createdAt": "2024-11-12T09:45:57Z"
+    },
+    {
+      "productId": "5",
+      "commentId": 26,
+      "userName": "سروش ترابی",
+      "rating": 1,
+      "comment": "Not bad, but could be better.",
+      "createdAt": "2025-02-13T09:45:57Z"
+    },
+    {
+      "productId": "9",
+      "commentId": 27,
+      "userName": "محسن نظری",
+      "rating": 3,
+      "comment": "Excellent product!",
+      "createdAt": "2024-09-10T09:45:57Z"
+    },
+    {
+      "productId": "1",
+      "commentId": 28,
+      "userName": "ایمان قاسمی",
+      "rating": 1,
+      "comment": "Fast delivery, good quality.",
+      "createdAt": "2025-03-12T09:45:57Z"
+    },
+    {
+      "productId": "15",
+      "commentId": 30,
+      "userName": "سانی حقیقی",
+      "rating": 1,
+      "comment": "Excellent product!",
+      "createdAt": "2025-04-07T09:45:57Z"
+    }
+  ]
+}

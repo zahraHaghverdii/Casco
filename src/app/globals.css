@@ -7,7 +7,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Shabnam";
   src: url("/Fonts/Shabnam-Medium.ttf") format("woff");
@@ -26,16 +25,48 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Shabnam";
+  src: url("/Fonts/Shabnam.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "iransansnum";
+  src: url("/Fonts/iransansnum.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* :root {
-} */
+:root {
+  --color-Dark-0: rgba(20, 23, 24, 1);
+  --color-Dark-10: rgba(23, 29, 40, 1);
+  --color-Dark-20: rgba(35, 38, 47, 1);
+  --color-Gray: rgba(108, 114, 117, 1);
+  --color-Gray-0: rgba(128, 126, 126, 0.534);
+  --color-Gray-50: #ededed;
+  --color-Gray-100: rgba(252, 252, 252, 0.87);
+  --color-Gray-200: rgb(86, 86, 86);
+  --color-White: rgba(255, 255, 255, 1);
+  --color-White-10: rgba(254, 254, 254, 1);
+  --color-Green: rgba(56, 203, 137, 1);
+  --color-Blue: rgba(55, 125, 255, 1);
+  --color--Blue-300: #233c5a;
+  --color--Blue-600: #314e72;
+  --color--Blue-700: #6555ee;
+  --color--Primary-700: #e6123d;
+
+  --background--opacity: rgb(0 0 0 / 0.2)
+
+  --shadow: 0 0 30px 0 rgb(0 0 0 / 0.15);
+}
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
 
   /* Creating animations for dark mode */
   transition: background-color 0.3s, border 0.3s;
@@ -48,15 +79,16 @@ html {
 body {
   /* background: var(--background-color);
   color: var(--color-text-primary); */
+  /* background-color: #f1f1f1; */
+  /* transition: color 0.3s, background-color 0.3s; */
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100%;
-  /* transition: color 0.3s, background-color 0.3s; */
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
-  font-family: IRANSansWeb;
+  font-family: iransansnum;
 }
 
 input,
@@ -75,11 +107,6 @@ button {
   cursor: not-allowed;
 }
 
-/* select:disabled,
-input:disabled {
-  background-color: var(--color-accent-warm);
-  color: var(--color-grey-500);
-} */
 
 input:focus,
 button:focus,
@@ -118,4 +145,67 @@ img {
   max-width: 100%;
   /* For dark mode */
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+}
+
+/* rtl */
+.rtl {
+  direction: rtl;
+}
+
+/* scrollbar-style */
+.scrollbar-style::-webkit-scrollbar {
+  display: none;
+}
+
+/* next  prev slider */
+/* custom-pagination */
+.custom-pagination {
+  max-width: min-content;
+  display: flex;
+  position: absolute;
+  z-index: 18;
+  background: #f0efefc4;
+  text-align: center;
+  padding: 10px 5px;
+  border-radius: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  background-color: rgb(80, 77, 77);
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: rgb(75, 74, 74);
+  transform: scale(1.2);
+}
+
+/* custom-next */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: rgba(155, 155, 155, 0.493);
+  color: black;
 }

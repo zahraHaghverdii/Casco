@@ -1,0 +1,28 @@
+{
+  "carts": [
+    {
+      "id": 1,
+      "userId": 2,
+      "items": [
+        {
+          "productId": "product123",
+          "name": "Product Name",
+          "price": 25000,
+          "quantity": 2,
+          "totalPrice": 50000
+        },
+        {
+          "productId": "product456",
+          "name": "Another Product",
+          "price": 15000,
+          "quantity": 1,
+          "totalPrice": 15000
+        }
+      ],
+      "totalItems": 3,
+      "totalPrice": 65000,
+      "createdAt": "2025-05-25T12:34:56Z",
+      "updatedAt": "2025-05-25T14:00:00Z"
+    }
+  ]
+}
