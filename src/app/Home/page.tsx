@@ -11,8 +11,8 @@ export const metadata = {
 // فراخوانی API در سرور
 const products: Product[] = await fetchAllProducts();
 
-function Home_page() {
+function page() {
   return <Home products={products} />;
 }
 
-export default Home_page;
+export default page;
