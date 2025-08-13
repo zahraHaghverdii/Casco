@@ -36,7 +36,7 @@ function CartProduct({ id, qty }: cartProductProps) {
   }, [id]);
 
   return (
-    <div className="bg-(--color-Gray-100) border border-gray-200 p-5 rounded-2xl grid grid-cols-12 sm:gap-x-5 gap-5">
+    <div className="bg-(var[--color-Gray-100]) border border-gray-200 p-5 rounded-2xl grid grid-cols-12 sm:gap-x-5 gap-5">
       <div className="relative w-full sm:col-span-2 col-span-12">
         {loading ? (
           <div className="w-full h-full bg-gray-200 animate-pulse rounded-xl" />
