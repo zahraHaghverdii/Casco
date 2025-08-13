@@ -25,7 +25,11 @@ function Home({ products }: { products: Product[] }) {
       setLoading(true);
       try {
         // شبیه‌سازی عملیات دریافت داده
-        if (!products) <ErrorModal message="محصول یافت نشد" />;
+        if (!products)
+          <ErrorModal
+            message="محصول یافت نشد"
+            onClose={() => console.log("close")}
+          />;
         setProductsAll(products);
       } catch (err: unknown) {
         setError(err instanceof Error ? err.message : "خطای ناشناخته");
@@ -35,7 +39,8 @@ function Home({ products }: { products: Product[] }) {
     fetchProducts();
   }, [products, setProductsAll, setLoading, setError]);
   if (loading) return <LoadingModal />;
-  if (error) return <ErrorModal message={error} />;
+  if (error)
+    return <ErrorModal message={error} onClose={() => console.log("close")} />;
   if (isEmpty) return <NoProductsFound />;
 
   // تخفیف ویژه
