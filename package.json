@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "start": "json-server --watch src/data/db.json --port 10000",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
