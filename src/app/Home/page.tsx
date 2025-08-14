@@ -1,6 +1,6 @@
-import Home from "./Home";
 import { Product } from "@/types/products";
 import { fetchAllProducts } from "@/api/fetch_products";
+import Home from "./Home";
 
 export const metadata = {
   title: {
@@ -11,8 +11,8 @@ export const metadata = {
 // فراخوانی API در سرور
 const products: Product[] = await fetchAllProducts();
 
-function page() {
+function Home_page() {
   return <Home products={products} />;
 }
 
-export default page;
+export default Home_page;
