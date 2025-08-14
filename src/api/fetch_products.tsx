@@ -1,40 +1,30 @@
-// api/products.ts
-const API_URL = "http://localhost:3001";
+const API_URL = process.env.NEXT_PUBLIC_API_BAS;
 
 export const fetchAllProducts = async () => {
   try {
+    if (!API_URL) throw new Error("API_URL تعریف نشده است.");
     const response = await fetch(`${API_URL}/products`);
     if (!response.ok) {
-      if (response.status === 404) {
-        throw new Error("محصولات یافت نشدند (خطای 404).");
-      } else if (response.status === 500) {
-        throw new Error("خطای داخلی سرور (500). لطفاً بعداً تلاش کنید.");
-      } else {
-        throw new Error(`خطای ناشناخته: ${response.status}`);
-      }
+      throw new Error(`خطا: ${response.status}`);
     }
     return await response.json();
   } catch (error: unknown) {
     const errorMessage =
       error instanceof Error ? error.message : "یک خطای ناشناخته رخ داده است.";
     console.error("خطا:", errorMessage);
-    throw new Error(` ${errorMessage}`);
+    throw new Error(errorMessage);
   }
 };
 
-// --------------------------------page product ------------------------------------
 // products name
 export const fetchNameProduct = async ({ name }: { name?: string }) => {
   try {
-    const response = await fetch(`${API_URL}/products?name=${name}`);
+    if (!API_URL) throw new Error("API_URL تعریف نشده است.");
+    const response = await fetch(
+      `${API_URL}/products?name_like=${encodeURIComponent(name || "")}`
+    );
     if (!response.ok) {
-      if (response.status === 404) {
-        throw new Error("محصولات یافت نشدند (خطای 404).");
-      } else if (response.status === 500) {
-        throw new Error("خطای داخلی سرور (500). لطفاً بعداً تلاش کنید.");
-      } else {
-        throw new Error(`خطای ناشناخته: ${response.status}`);
-      }
+      throw new Error(`خطا: ${response.status}`);
     }
     return await response.json();
   } catch (error: unknown) {
@@ -45,7 +35,7 @@ export const fetchNameProduct = async ({ name }: { name?: string }) => {
   }
 };
 
-// ----------------------pagination/sort/category/search,... -------------------
+// pagination / sort / category / search,...
 export const fetchProductsList = async ({
   page,
   per_page,
@@ -64,19 +54,22 @@ export const fetchProductsList = async ({
   maxPrice?: string;
 }) => {
   try {
-    const response = await fetch(
-      `http://localhost:3001/products?_page=${page}&_per_page=${per_page}&name=${name}&sort=${sort}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`
-    );
+    const query = new URLSearchParams();
+
+    if (page) query.append("_page", String(page));
+    if (per_page) query.append("_per_page", String(per_page));
+    if (name) query.append("name_like", name); // ⬅ بدون encodeURIComponent
+    if (sort) query.append("sort", sort);
+    if (category) query.append("general_category", category);
+    if (minPrice) query.append("minPrice", String(minPrice));
+    if (maxPrice) query.append("maxPrice", String(maxPrice));
+
+    const response = await fetch(`${API_URL}/products?${query.toString()}`);
 
     if (!response.ok) {
-      if (response.status === 404) {
-        throw new Error("محصولات یافت نشدند (خطای 404).");
-      } else if (response.status === 500) {
-        throw new Error("خطای داخلی سرور (500). لطفاً بعداً تلاش کنید.");
-      } else {
-        throw new Error(`خطای ناشناخته: ${response.status}`);
-      }
+      throw new Error(`خطا: ${response.status}`);
     }
+
     return await response.json();
   } catch (error: unknown) {
     const errorMessage =

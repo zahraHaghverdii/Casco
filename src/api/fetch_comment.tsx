@@ -1,9 +1,10 @@
-const API_URL = "http://localhost:3002/comments";
+// const API_URL = "http://localhost:3002/comments";
+const API_URL = process.env.NEXT_PUBLIC_API_BAS;
 
 export const fetchCommentsAllProduct = async () => {
   try {
     // انجام درخواست به API برای دریافت نظرات
-    const response = await fetch(`${API_URL}`);
+    const response = await fetch(`${API_URL}/comments`);
 
     // بررسی وضعیت پاسخ و مدیریت خطا
     if (!response.ok) {
@@ -40,7 +41,7 @@ export const fetchCommentIdProduct = async ({
     }
 
     // انجام درخواست به API برای دریافت نظرات
-    const response = await fetch(`${API_URL}?productId=${productId}`);
+    const response = await fetch(`${API_URL}/comments?productId=${productId}`);
 
     // بررسی وضعیت پاسخ و مدیریت خطا
     if (!response.ok) {

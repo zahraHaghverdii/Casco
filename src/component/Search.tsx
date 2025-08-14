@@ -14,29 +14,17 @@ export default function Search() {
   // تابع سرچ
   const handelSearch = () => {
     if (!search.trim()) {
-      // اگر ورودی خالی بود، صفحه تغییر نمی‌کند.
       setTextError("لطفاً یک عبارت برای جستجو وارد کنید.");
       return;
     }
 
-    // بررسی وجود محصول
-    const productExists = products.some((product) =>
-      product.name.toLowerCase().includes(search.toLowerCase())
-    );
-
-    if (productExists) {
-      // محصول موجود است، به صفحه مربوطه بروید
-      setTextError(""); // پاک کردن پیام خطا
-      router.push(`/product?name=${search}`);
-    } else {
-      // محصول وجود ندارد، نمایش پیام خطا
-      setTextError(
-        "محصولی با این نام یافت نشد. لطفاً عبارت دیگری را امتحان کنید."
-      );
+    if (search) {
+      setTextError("");
+      // رفتن به صفحه نتایج با query string
+      router.push(`/product?name=${encodeURIComponent(search)}`);
     }
   };
 
-  // مدیریت رویداد Enter
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handelSearch();

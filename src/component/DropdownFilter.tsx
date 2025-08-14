@@ -13,7 +13,6 @@ interface TItems {
   icon: JSX.Element | "";
   children: ReactNode;
   activeDropdown: string | null;
-  activeOverlay: string | null;
   toggleDropdown: (id: string) => void;
 }
 export default function Dropdown({

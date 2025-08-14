@@ -31,7 +31,13 @@ function Products({ products, pageCount, uniqueCategory }: TproductsList) {
       setLoading(true);
       try {
         // شبیه‌سازی عملیات دریافت داده
-        if (!products) <ErrorModal message="محصول یافت نشد" />;
+        if (!products)
+          <ErrorModal
+            message="محصول یافت نشد"
+            onClose={() => console.log("close")}
+          />;
+        <div></div>;
+
         setProductsAll(products);
       } catch (err: unknown) {
         setError(err instanceof Error ? err.message : "خطای ناشناخته");
@@ -41,7 +47,8 @@ function Products({ products, pageCount, uniqueCategory }: TproductsList) {
     fetchProducts();
   }, [products, setProductsAll, setLoading, setError]);
   if (loading) return <LoadingModal />;
-  if (error) return <ErrorModal message={error} />;
+  if (error)
+    return <ErrorModal message={error} onClose={() => console.log("close")} />;
 
   return (
     <Container>

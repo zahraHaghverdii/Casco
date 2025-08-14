@@ -5,7 +5,7 @@ import { Product } from "@/types/products";
 import DescriptionProduct from "./DescriptionProduct";
 import PriceProductPage from "./PriceProductPage";
 import FeedbackPage from "./FeedbackPage";
-import ErrorModal from "@/ui/ErrorMoadal";
+// import ErrorModal from "@/ui/ErrorMoadal";
 interface Tproduct {
   error: string;
   params: {
@@ -13,24 +13,28 @@ interface Tproduct {
   };
 }
 
-async function ProductPage({ params, error }: Tproduct) {
-  const name = params?.name;
+async function page({ params: paramsPromise, error }: Tproduct) {
+  const params = await paramsPromise;
+  const name = params.name;
+
   const product = (await fetchNameProduct({ name })) as Product[];
 
   if (!product || product.length === 0) {
     console.error("محصول یافت نشد.");
-    return <ErrorModal message={"محصول یافت نشد"} />;
+    return <p>محصول یافت نشد</p>;
+    // return <ErrorModal message={"محصول یافت نشد"} />;
   }
 
   const productId = product.map((item) => item.id)[0]?.toString();
   if (!productId) {
     console.error("محصول یافت نشد.");
-    return <ErrorModal message={"محصول یافت نشد"} />;
+    return <p>محصول یافت نشد</p>;
   }
 
   if (error) {
     console.error(error);
-    return <ErrorModal message={error} />;
+    return <p>{error}</p>;
+    // return <ErrorModal message={error} />;
   }
 
   return (
@@ -51,4 +55,4 @@ async function ProductPage({ params, error }: Tproduct) {
   );
 }
 
-export default ProductPage;
+export default page;

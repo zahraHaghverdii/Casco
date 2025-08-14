@@ -28,7 +28,7 @@ export default function CartPriceTotale() {
 
   // fetch data
   useEffect(() => {
-    axios(`http://localhost:3001/products`)
+    axios(`${process.env.NEXT_PUBLIC_API_BAS}/products`)
       .then((result) => {
         const { data } = result;
         setData(data);
@@ -40,7 +40,7 @@ export default function CartPriceTotale() {
 
   // discounts
   function handelDicountCode() {
-    axios(`http://localhost:3003/discounts?code=${codeDiscount}`)
+    axios(`${process.env.NEXT_PUBLIC_API_BAS}/discounts?code=${codeDiscount}`)
       .then((result) => {
         const data = result.data;
 

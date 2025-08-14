@@ -24,7 +24,7 @@ function CartProduct({ id, qty }: cartProductProps) {
   } = useCart();
 
   useEffect(() => {
-    axios(`http://localhost:3001/products/${id}`)
+    axios(`${process.env.NEXT_PUBLIC_API_BAS}/products/${id}`)
       .then((result) => {
         setData(result.data);
         setLoading(false);
