@@ -1,6 +1,6 @@
 import { Product } from "@/types/products";
 import { fetchAllProducts } from "@/api/fetch_products";
-import Home from "./home";
+import Home from "./Home";
 
 export const metadata = {
   title: {
