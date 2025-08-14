@@ -1,5 +1,5 @@
 "use client";
-import { useAllProductStore } from "@/zustand/useProducts";
+// import { useAllProductStore } from "@/zustand/useProducts";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -9,7 +9,7 @@ export default function Search() {
   const [textError, setTextError] = useState("");
 
   const router = useRouter();
-  const { products } = useAllProductStore();
+  // const { products } = useAllProductStore();
 
   // تابع سرچ
   const handelSearch = () => {
